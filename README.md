@@ -6,6 +6,8 @@ Web APIs, or Application Programming Interfaces, are like magical portals that c
 
 Imagine being able to use social media features, payment gateways, mapping services, weather data, and more, all within your own applications. Well, web APIs make that possible!
 
+1[api](https://www.grapecity.com/componentone/docs/webapi/online-webapicore/images/webapi_core.png)
+
 To embark on this exciting journey, here's a brief guide to using web APIs:
 
 **Creating a Request**
