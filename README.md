@@ -10,11 +10,11 @@ Imagine being able to use social media features, payment gateways, mapping servi
 
 To embark on this exciting journey, here's a brief guide to using web APIs:
 
-**Creating a Request**
+## Creating a Request
 
 To communicate with a Web API, we need to create a request. Think of it as composing a letter to your favorite website or service, kindly asking for something specific. In this letter, we'll include details such as the URL (the web address of the API), any necessary parameters (extra information to refine our request), and sometimes even special keys or tokens that prove our authenticity.
 
-**Handling the Response (JSON)**
+## Handling the Response (JSON)
 
 Once we've sent our request, it's time to patiently wait for the response, like receiving a message in a bottle from the API. The response will arrive with a special gift called JSON (JavaScript Object Notation). JSON is a magical format for representing data that's easy for both humans and computers to understand.
 
