@@ -24,7 +24,7 @@ Follow the [key-generator-guide](./expirement/key-generator-guide.md)
 ## Best Practices and Security Considerations
 To ensure the security of API keys, it is essential to follow best practices.**Avoid exposing API keys in public repositories or client-side JavaScript code**, as they can be easily compromised. Instead, consider storing API keys on the server-side or using environment variables to keep them secure. By adhering to these practices, you protect sensitive data and prevent unauthorized access to APIs. Understanding the importance of securing API keys will help you develop robust and secure web applications.
 
-### Using a Local .env File:
+## Using a Local .env File:
 One recommended approach for storing API keys is by utilizing a local `.env` file. The `.env` file acts as a container for sensitive information and is not meant to be shared publicly. Instead, it remains on your local machine, providing a layer of security.
 
 **Step 1: Install dotenv**
