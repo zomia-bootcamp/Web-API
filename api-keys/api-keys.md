@@ -18,7 +18,7 @@ To gain practical experience, we will walk through the process of generating an 
 ### Expirement:
 
 Now try it on your own!
-Follow the [key-generator-guide](./expirement/key-generator-guide.md)
+Follow the [key-generator-guide](./expirement/key-generator-guide.md) to generate your first api key.
 
 
 ## Best Practices and Security Considerations
@@ -65,63 +65,59 @@ This line of code loads the environment variables from the .env file into your a
 
 #### Remember:
 
-- Do not share your .env file publicly or commit it to version control systems like Git.
-- Add the .env file to your project's .gitignore file to ensure it is not accidentally shared.
-- Whenever you make changes to the .env file, restart your application for the changes to take effect.
+- Do not share your `.env` file publicly or commit it to version control systems like Git.
+- Add the .env file to your project's `.gitignore` file to ensure it is not accidentally shared.
+- Whenever you make changes to the `.env` file, restart your application for the changes to take effect.
+
+### Expirement:
+
+Copy the api key you generated fro AirLabs, and save it locally on your machine.
 
 
+## Making API Requests 
+It's time to put our knowledge into action and make API requests using the API key we generated. Follow along as I provide a code example of making an API request, including the API key in the request headers or parameters. 
+```js
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
 
-Practice Session 3: Secure API Key Handling (15 minutes)
-In this final practice session, we will tackle a scenario that requires you to implement secure API key handling within a web application. Apply the best practices discussed earlier to securely handle the API key. Consider encrypting the API key or implementing server-side authentication mechanisms to prevent unauthorized access. Share your implementations with the class and engage in discussions about different approaches to secure API key handling.
+dotenv.config();
 
-Practice Session 2: Making API Requests (15 minutes)
-It's time to put our knowledge into action and make API requests using the API key we generated. We will use JavaScript to demonstrate the process. Follow along as we provide a code example of making an API request, including the API key in the request headers or parameters. Experiment with different endpoints and data types provided by the chosen API to retrieve and display relevant information. This hands-on practice will help solidify your understanding of using API keys to access data from web APIs.
+const apiKey = process.env.API_KEY;
 
-Popular Web APIs (15 minutes)
+// Function to make the API request
+function getWeatherData(city) {
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+  // Send the GET request to the API
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      // Process the API response
+      console.log(data); // You can customize how you handle and display the data
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
+}
+
+// Call the function with the desired city
+getWeatherData('London');
+
+```
+
+In this example, we use the `import` statement to import the `dotenv` and `node-fetch` packages. The `dotenv.config()` line is used to load the API key from the `.env` file, and the API key is accessed via `process.env.API_KEY`.
+
+## Let's Get Real - Air Quality Index Display:
+
+### Group Activity:
+
+* Use the AirLabs API to fetch air quality data for a specific location.
+* Create a user interface where users can input their location or select it from a list.
+* Retrieve the air quality index (AQI) from the API response and display it along with relevant information such as pollutant levels and health recommendations.
+* Visualize the air quality index using different colors or icons to represent different levels of air pollution.
+
+*Feeling lost? Ask chatGPT to break down the instructions to smaller tastks*
+
+
+## Popular Web APIs 
 Now that we understand the concept of API keys, let's explore some popular web APIs that require API keys for access. These APIs provide a wide range of functionalities and data that can enhance web applications. For example, weather APIs offer real-time weather data, social media APIs enable integration with popular social platforms, and mapping APIs provide features like interactive maps and geolocation services. Understanding how these APIs utilize API keys will broaden your understanding of their importance in web development.
-
-Conclusion (5 minutes)
-
-To ensure students have time to engage and practice code during the lesson, it's beneficial to intersperse interactive coding exercises throughout the lecture. Here's a suggested placement of code practice sessions within the breakdown of the lecture:
-
-1. Introduction (5 minutes)
-   - Briefly explain the concept of APIs and their role in web development.
-   - Emphasize the importance of APIs in accessing external services and data.
-   - Introduce the concept of API keys as a means of authentication and authorization.
-
-2. Understanding API Keys (10 minutes)
-   - Define what API keys are and their purpose in API interactions.
-   - Explain how API keys serve as a secret passcode to access APIs and their associated services.
-   - Discuss the security implications of API keys and the need to protect them.
-
-3. Practice Session 1: Generating an API Key (10 minutes)
-   - Instruct students to sign up for an API key from a provider of their choice.
-   - Guide them through the process of obtaining an API key.
-   - Encourage students to share their experiences and ask questions during this practice session.
-
-4. Popular Web APIs (15 minutes)
-   - Highlight some popular web APIs that require API keys, such as weather APIs, social media APIs, and mapping APIs.
-   - Explain the functionalities and data these APIs provide.
-   - Discuss the benefits of incorporating these APIs into web applications.
-
-5. Practice Session 2: Making API Requests (15 minutes)
-   - Provide a code example of making an API request using JavaScript and demonstrate how to include the API key.
-   - Guide students through the process of making their own API requests using the provided code example.
-   - Encourage experimentation and exploration with different API endpoints and data.
-
-6. Best Practices and Security Considerations (10 minutes)
-   - Discuss best practices for securely managing and storing API keys.
-   - Emphasize the importance of keeping API keys private and avoiding exposure in client-side JavaScript code.
-   - Explain techniques such as storing API keys on the server-side or using environment variables.
-
-7. Practice Session 3: Secure API Key Handling (15 minutes)
-   - Provide a scenario where students need to secure their API key within a web application.
-   - Challenge students to implement the best practices discussed to ensure secure handling of the API key.
-   - Encourage students to share their implementations and discuss their approaches.
-
-8. Q&A and Conclusion (10 minutes)
-   - Allow time for questions and answers to address any confusion or concerns.
-   - Summarize the main points covered in the lecture.
-   - Encourage further exploration of APIs and the utilization of API keys in web development.
-
-By incorporating multiple practice sessions throughout the lecture, students have the opportunity to apply their knowledge immediately and solidify their understanding of concepts. It also promotes active learning and engagement during the lesson.
