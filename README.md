@@ -1,5 +1,20 @@
 # Web-API
 
+## Objectives
+
+- Understand the basics of working with APIs
+- Implement API requests using JavaScript
+- Integrate API data into HTML/CSS webpages
+- Handle errors and provide error handling
+- Enhance user interactivity and experience
+- Apply best practices and security considerations
+
+## Preparation
+
+1. Fork and clone this repository.
+2. Create a new branch called `training` for your work.
+3. Install the necessary dependencies using `npm install`.
+
 
 ## Welcome to the wonderful world of web APIs! 🌐✨
 
