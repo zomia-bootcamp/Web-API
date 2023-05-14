@@ -36,7 +36,7 @@ Visit [boredapi.com](http://www.boredapi.com/) and immerse yourself in the realm
 
 To communicate with a Web API, we need to create a request. Think of it as composing a friendly message to your favorite website or service, kindly asking for something specific. Just like sending a secure letter, API communication is done over [HTTPS](https://developer.mozilla.org/en-US/docs/Web/HTTP), ensuring a safe and encrypted connection.
 
-![url structor]([https://upload.wikimedia.org/wikipedia/commons/b/ba/URL_structure.jpg](https://cdn.ttgtmedia.com/rms/editorial/020619_TSS_RESTful-URL_half_column_mobile.png))
+![url structor](https://cdn.ttgtmedia.com/rms/editorial/020619_TSS_RESTful-URL_half_column_mobile.png)
 
 In our request, we'll include important details:
 * **URL**: The web address of the API we want to interact with. 
