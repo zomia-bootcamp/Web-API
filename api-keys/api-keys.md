@@ -48,6 +48,7 @@ WEATHER_API_KEY=your_api_key_here
 
 ```
 **Step 4: Save the .env File:**
+
 After adding the API key to the `.env` file, save the file in the same directory as your project.
 
 **Step 5: Load Environment Variables in Your Code:**
@@ -62,7 +63,7 @@ dotenv.config();
 ```
 This line of code loads the environment variables from the .env file into your application.
 
-####Remember:
+#### Remember:
 
 - Do not share your .env file publicly or commit it to version control systems like Git.
 - Add the .env file to your project's .gitignore file to ensure it is not accidentally shared.
