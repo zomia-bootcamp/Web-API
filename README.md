@@ -88,12 +88,14 @@ Inside the `.then()` method, we can access the JSON response, and let creativity
 
 Use the activity suggestion you received in the [api.js](./expirement/api.js), to display it on your website. Here are two ideas to how you can use this data:
 * Random Activity Generator: Retrieve a random activity from the Bored API and display it on your webpage. You can create a button or a link that, when clicked, fetches a random activity from the API and dynamically updates the HTML to show the activity.
+* 
 *Feeling lost?*
-[Step by step guide](./expirement/activity-generator-guide.md)
+Use this [Step by step guide](./expirement/activity-generator-guide.md)
 
 * Categorized Activity Lists: The Bored API provides activities categorized by type (e.g., education, recreational, social). You can fetch activities from specific categories and display them in separate sections on your webpage. For example, you could have a section for educational activities, another for recreational activities, and so on.
+* 
 *Feeling lost?*
-[Step by step guide](./expirement/categorized-activities-guide.md)
+Use this [Step by step guide](./expirement/categorized-activities-guide.md)
 
 
 
