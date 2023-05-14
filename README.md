@@ -1,5 +1,6 @@
 # Web-API
 
+
 ## Welcome to the wonderful world of web APIs! 🌐✨
 
 Web APIs, or Application Programming Interfaces, are like magical portals that connect different software applications on the web. They allow developers, like you, to tap into the amazing powers of various web services and platforms.
@@ -52,63 +53,85 @@ function fetchRandomActivity() {
 ### Expirement
 Explore other options and parameters provided by the API. The documentation on the [Bored API website](http://www.boredapi.com/) is your trusty guide to unveil all the enchanting features available.
 
-Write functions to fetch the correct data for the following cases:
+In [api.js](./expirement/api.js), write functions to fetch the correct data for the following cases:
 * An activity for 3 participants
 * An educational activity
 * Low budget activity. the cost should be from $5 to $10.
 The functions you created will send a request and return a Promise, allowing you to handle the response gracefully.
 
 ## Step 3: Embrace the Response
+
 Once we've sent our request, it's time to patiently wait for the response, like receiving a message in a bottle from the API. 
 The response will arrive with a special gift called [JSON](https://en.wikipedia.org/wiki/JSON) (JavaScript Object Notation). 
-JSON is a magical format for representing data that's easy for both humans and computers to understand.
+JSON is a format for representing data that's easy for both humans and computers to understand.
 
 ![json](https://www.w3resource.com/w3r_images/jsonviewer.stack.hu-format.png)
 
 Inside the `.then()` method, we can access the JSON response, and let creativity flow. 
-Use the activity suggestion to display it on your website, build a fun game, or even create a random activity generator. The choice is yours!
+
+### Expirement
+
+Use the activity suggestion you received in the [api.js](./expirement/api.js), to display it on your website. Here are two ideas to how you can use this data:
+* Random Activity Generator: Retrieve a random activity from the Bored API and display it on your webpage. You can create a button or a link that, when clicked, fetches a random activity from the API and dynamically updates the HTML to show the activity.
+*Feeling lost? 
+[Step by step guide](./expirement/activity-generator-guide.md)
+
+* Categorized Activity Lists: The Bored API provides activities categorized by type (e.g., education, recreational, social). You can fetch activities from specific categories and display them in separate sections on your webpage. For example, you could have a section for educational activities, another for recreational activities, and so on.
+*Feeling lost? 
+[Step by step guide](./expirement/categorized-activities-guide.md)
 
 
 
 
-6. **Error Handling**: Even in the enchanting world of APIs, things can sometimes go awry. But fear not! By anticipating and handling errors gracefully, you can ensure a smooth and magical experience for your users. Be prepared to troubleshoot and overcome challenges like a true wizard.
+**Error Handling**: Even in the enchanting world of APIs, things can sometimes go awry. But fear not! By anticipating and handling errors gracefully, you can ensure a smooth and magical experience for your users. Be prepared to troubleshoot and overcome challenges like a true wizard.
+To add an error handler to the code, follow these instructions:
 
-7. **API Best Practices**: Just like any great adventure, there are some best practices to follow. These might include optimizing your requests, using caching wisely, respecting rate limits (like taking breaks during your magical exploration), and keeping everything secure with HTTPS.
+1. Locate the section of the JavaScript code where you are making the API request (in both Idea 1 and Idea 2).
 
-With these steps as your guide, you'll be able to harness the power of web APIs to create incredible and interconnected web experiences for your users. So go forth, explore, and let your creativity soar!
+2. Add a `.catch()` method after the `.then()` method to handle any errors that may occur during the API request.
+
+3. Inside the `.catch()` method, define a callback function that will execute when an error occurs. This function will receive an `error` parameter.
+
+4. In the error callback function, you can perform the following tasks:
+   - Display an error message on the webpage to inform the user about the issue.
+   - Log the error details to the browser console for debugging purposes.
+   - Disable or modify any affected UI elements as necessary.
+
+Here's an example of how you can modify the code to include an error handler:
+
+```js
+
+fetch('http://www.boredapi.com/api/activity')
+  .then(response => response.json())
+  .then(data => {
+    // Display the random activity on the webpage
+    const activityDiv = document.getElementById('activity');
+    activityDiv.innerHTML = data.activity;
+  })
+  .catch(error => {
+    // Handle any errors that occur during the API request
+    console.error('An error occurred:', error);
+    // Display an error message on the webpage
+    const activityDiv = document.getElementById('activity');
+    activityDiv.innerHTML = 'Oops! Failed to fetch a random activity. Please try again later.';
+  });
+```
+
+With these modifications, if an error occurs during the API request, an error message will be displayed on the webpage, and the error details will be logged to the console for debugging purposes.
+
+
+### Expirement
+
+Now it's your turn!
+Add an error andler to your code in [api.js](./expirement/api.js).
+Make sure to replace the URLs and element IDs with the appropriate values for your code.
+
+## API Best Practices: 
+Just like any great adventure, there are some best practices to follow. These might include optimizing your requests, using caching wisely, respecting rate limits (like taking breaks during your magical exploration), and keeping everything secure with HTTPS.
 
 Remember, each API has its own unique features and guidelines, so make sure to consult the documentation and embrace the magic within.
 
 Happy API adventures! ✨🚀🌈
 
-I hope this friendly explanation helps you embark on your API journey with a smile! If you have any further questions, don't hesitate to ask. Enjoy the magic of web APIs!
 
-
-
-
----
-
-
-
-
-
-
-
-
-
-**The JSON is Your Canvas**
-
-With the JSON data in our hands, we can unleash our creativity! We can display the information on a website, create interactive visualizations, build mobile apps, or even power chatbots that have delightful conversations. JSON provides a flexible and expressive way to work with data, empowering us to create magical experiences for those who interact with our applications.
-
-**Remember to Be a Good API Wizard**
-
-As we explore the world of Web APIs, let's remember to be good API wizards. Respect the rules and guidelines set by the API providers. Read their documentation, discover their limits, and adhere to any authentication or rate limits they may have. Being a good API citizen ensures that the magical world of Web APIs remains a harmonious and pleasant place for everyone.
-
-**API Best Practices**: Just like any great adventure, there are some best practices to follow. These might include optimizing your requests, using caching wisely, respecting rate limits (like taking breaks during your magical exploration), and keeping everything secure with HTTPS.
-
-With these steps as your guide, you'll be able to harness the power of web APIs to create incredible and interconnected web experiences for your users. So go forth, explore, and let your creativity soar!
-
-Remember, each API has its own unique features and guidelines, so make sure to consult the documentation and embrace the magic within.
-
-Happy API adventures! ✨🚀🌈
 
