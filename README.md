@@ -59,7 +59,7 @@ function fetchRandomActivity() {
     .then(response => response.json())
     .then(data => {
       // Let's have some fun with the data!
-      console.log(data.activity);
+      console.log(data);
     })
     .catch(error => {
       // Oops! Something went wrong. Let's handle the error gracefully.
