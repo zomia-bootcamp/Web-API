@@ -70,10 +70,10 @@ To fetch a random activity, we can create a function like this:
 ### Expirement
 Explore other options and parameters provided by the API. The documentation on the [Bored API website](http://www.boredapi.com/) is your trusty guide to unveil all the enchanting features available.
 
-In [api.js](./expirement/api.js), write functions to fetch the correct data for the following cases:
-* An activity for 3 participants
-* An educational activity
-* Low budget activity. the cost should be from $5 to $10.
+In [api.js](./expirement/api.js), write functions to fetch and log the correct data for the following cases:
+* A list of three different beer types with the amount of alcohol they contain.
+* A random person's first name, last name, city, and credit card number.
+* An array of 10 different appliances.
 The functions you created will send a request and return a Promise, allowing you to handle the response gracefully.
 
 ## Step 3: Embrace the Response
