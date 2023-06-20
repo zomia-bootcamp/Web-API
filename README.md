@@ -54,16 +54,17 @@ In essence, `fetch` being promise-based ensures that we can interact with server
 To fetch a random activity, we can create a function like this:
 
 ```js
-fetch(URL)
-		.then((res) => res.json())
-		.then((data) => {
-			// Let's have some fun with the data!
-			console.log(data)
-		})
-		.catch((error) => {
-			// Oops! Something went wrong. Let's handle the error gracefully.
-			console.error(error)
-		})
+
+    fetch(URL)
+	.then((res) => res.json())
+	.then((data) => {
+		// Let's have some fun with the data!
+		console.log(data)
+	})
+	.catch((error) => {
+		// Oops! Something went wrong. Let's handle the error gracefully.
+		console.error(error)
+	})
 
 ```
 ### Expirement
